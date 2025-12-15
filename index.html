@@ -44,12 +44,33 @@
   <header class="bg-white border-b border-gray-200 py-6 px-8 sticky top-0 z-50 shadow-sm">
     <div class="max-w-[1400px] mx-auto">
       <h1 class="text-2xl font-bold text-gray-900">Property Card Redesign</h1>
-      <p class="text-gray-500 mt-1">TravelAI Solutions - Current → Figma Proposal → Final Proposal</p>
+      <p class="text-gray-500 mt-1">TravelAI Solutions - Current → Figma Proposal → Revised Proposal</p>
+
+      <!-- Navigation Tabs -->
+      <nav class="flex gap-4 mt-4 border-b border-gray-200">
+        <button class="tab-btn active pb-2 px-4 font-medium border-b-2 border-[#0d6e6e] text-[#0d6e6e]" onclick="showTab('home')">
+          Home
+        </button>
+        <button class="tab-btn pb-2 px-4 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700" onclick="showTab('kayak')">
+          Kayak.com
+        </button>
+        <button class="tab-btn pb-2 px-4 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700" onclick="showTab('vacationrenter')">
+          VacationRenter.com
+        </button>
+      </nav>
     </div>
   </header>
 
   <main class="max-w-[1400px] mx-auto px-8 py-12">
-    
+
+    <!-- Tab Content: Home -->
+    <div id="home-tab" class="tab-content">
+
+    <!-- QBR Image -->
+    <section class="mb-8">
+      <img src="./travelai-qbr.png" alt="TravelAI QBR Analysis" class="w-full rounded-xl shadow-lg"/>
+    </section>
+
     <!-- ==================== CONTEXT SECTION ==================== -->
     <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
       <div class="flex items-start gap-3 mb-4">
@@ -240,9 +261,9 @@
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
           
-          <!-- FINAL PROPOSAL - PARITY -->
+          <!-- REVISED PROPOSAL - PARITY -->
           <div>
-            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Final Proposal (Parity)</p>
+            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Revised Proposal (Parity)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -380,9 +401,9 @@
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
           
-          <!-- FINAL PROPOSAL - PARITY -->
+          <!-- REVISED PROPOSAL - PARITY -->
           <div>
-            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Final Proposal (Parity)</p>
+            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Revised Proposal (Parity)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -536,9 +557,9 @@
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
           
-          <!-- FINAL PROPOSAL - EXCEED -->
+          <!-- REVISED PROPOSAL - EXCEED -->
           <div>
-            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Final Proposal (Exceed)</p>
+            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Revised Proposal (Exceed)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -675,9 +696,9 @@
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
           
-          <!-- FINAL PROPOSAL - EXCEED -->
+          <!-- REVISED PROPOSAL - EXCEED -->
           <div>
-            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Final Proposal (Exceed)</p>
+            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Revised Proposal (Exceed)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -770,12 +791,78 @@
         </div>
       </div>
     </section>
-    
+
+    </div>
+    <!-- End Home Tab -->
+
+    <!-- Tab Content: Kayak.com -->
+    <div id="kayak-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">Kayak.com Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Screenshots and analysis of Kayak.com property card implementations.
+        </p>
+
+        <!-- Placeholder for Kayak screenshots -->
+        <div class="bg-gray-50 rounded-lg p-8 border-2 border-dashed border-gray-300 text-center">
+          <p class="text-gray-500 text-lg">📸 Kayak.com screenshots will be added here</p>
+          <p class="text-gray-400 text-sm mt-2">Please provide screenshots of Kayak.com property cards</p>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: VacationRenter.com -->
+    <div id="vacationrenter-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">VacationRenter.com Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Screenshots and analysis of VacationRenter.com property card implementations.
+        </p>
+
+        <!-- Placeholder for VacationRenter screenshots -->
+        <div class="bg-gray-50 rounded-lg p-8 border-2 border-dashed border-gray-300 text-center">
+          <p class="text-gray-500 text-lg">📸 VacationRenter.com screenshots will be added here</p>
+          <p class="text-gray-400 text-sm mt-2">Please provide screenshots of VacationRenter.com property cards</p>
+        </div>
+      </section>
+    </div>
+
   </main>
-  
+
   <footer class="text-center py-6 text-gray-400 text-sm">
     Property Card Redesign - TravelAI Solutions - December 2025
   </footer>
-  
+
+  <!-- Tab Navigation Script -->
+  <script>
+    function showTab(tabName) {
+      // Hide all tabs
+      document.querySelectorAll('.tab-content').forEach(tab => {
+        tab.classList.add('hidden');
+      });
+
+      // Remove active state from all buttons
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.classList.remove('active', 'border-[#0d6e6e]', 'text-[#0d6e6e]');
+        btn.classList.add('border-transparent', 'text-gray-500');
+      });
+
+      // Show selected tab
+      document.getElementById(tabName + '-tab').classList.remove('hidden');
+
+      // Add active state to clicked button
+      event.target.classList.add('active', 'border-[#0d6e6e]', 'text-[#0d6e6e]');
+      event.target.classList.remove('border-transparent', 'text-gray-500');
+    }
+  </script>
+
 </body>
 </html>
