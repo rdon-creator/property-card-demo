@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push:*)",
+      "Bash(gh repo view:*)",
+      "Bash(git remote:*)",
+      "Bash(git commit:*)",
+      "Bash(gcloud --version:*)",
+      "Bash(git add:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}
