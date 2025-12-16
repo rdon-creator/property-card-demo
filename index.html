@@ -54,29 +54,11 @@
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('overview')">
           Overview
         </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('kayak')">
-          Kayak
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('vacationrenter')">
-          VacationRenter
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('agoda')">
-          Agoda
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('airbnb')">
-          Airbnb
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('booking')">
-          Booking.com
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('cozycozy')">
-          CozyCozy
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('rentbyowner')">
+          RentByOwner
         </button>
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('hometogo')">
           HomeToGo
-        </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('onefinestay')">
-          Onefinestay
         </button>
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('tripadvisor')">
           TripAdvisor
@@ -84,8 +66,26 @@
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('vrbo')">
           VRBO
         </button>
-        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('rentbyowner')">
-          RentByOwner
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('airbnb')">
+          Airbnb
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('agoda')">
+          Agoda
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('booking')">
+          Booking.com
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('cozycozy')">
+          CozyCozy
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('kayak')">
+          Kayak
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('onefinestay')">
+          Onefinestay
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('vacationrenter')">
+          VacationRenter
         </button>
       </nav>
     </div>
@@ -96,21 +96,16 @@
     <!-- Tab Content: Home -->
     <div id="home-tab" class="tab-content">
 
-    <!-- QBR Image -->
-    <section class="mb-8">
-      <img src="./travelai-qbr.png" alt="TravelAI QBR Analysis" class="w-full rounded-xl shadow-lg"/>
-    </section>
-
     <!-- ==================== CONTEXT SECTION ==================== -->
     <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
       <div class="flex items-start gap-3 mb-4">
         <span class="bg-red-100 text-red-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">CONTEXT</span>
         <h2 class="text-2xl font-bold text-gray-900">Why This Update is Needed</h2>
       </div>
-      
+
       <p class="text-gray-600 mb-6">
-        Analysis from the recent Expedia QBR identified that TravelAI's PinnedSRP property cards are missing 
-        key information that competitors display. This gap reduces qualified click-through rates and 
+        Analysis from the recent Expedia QBR identified that TravelAI's PinnedSRP property cards are missing
+        key information that competitors display. This gap reduces qualified click-through rates and
         user confidence in booking decisions.
       </p>
       
@@ -188,7 +183,14 @@
           </p>
         </div>
       </div>
+    </section>
 
+    <!-- QBR Image -->
+    <section class="mb-12">
+      <img src="./travelai-qbr.png" alt="TravelAI QBR Analysis" class="w-1/2 mx-auto rounded-xl shadow-lg"/>
+    </section>
+
+    <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
       <!-- Current Examples -->
       <div class="mt-8">
         <h3 class="font-semibold text-gray-800 mb-4">Current TravelAI Property Cards</h3>
@@ -1671,162 +1673,8 @@
         <!-- Competitors Grid -->
         <div class="space-y-12">
 
-          <!-- Kayak.com -->
+          <!-- RentByOwner (TravelAI) - FIRST -->
           <div class="border-b border-gray-200 pb-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">Kayak.com</h3>
-            <div class="grid lg:grid-cols-2 gap-8">
-              <!-- Screenshots -->
-              <div class="space-y-4">
-                <div>
-                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
-                  <img src="./RP Kayak.com.png" alt="Kayak desktop" class="w-full rounded-lg shadow border border-gray-200"/>
-                </div>
-                <div>
-                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
-                  <img src="./RP kayak.com mobile iphone 14.png" alt="Kayak mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
-                </div>
-              </div>
-
-              <!-- UX Analysis -->
-              <div class="space-y-6">
-                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
-                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    Good UX
-                  </h4>
-                  <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">1.</span>
-                      <span>Multi-partner price comparison in single view</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">2.</span>
-                      <span>Large, prominent property images (~40% card width)</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">3.</span>
-                      <span>Clear rating badges with review counts</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">4.</span>
-                      <span>Transparent partner attribution with logos</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">5.</span>
-                      <span>Horizontal card layout optimized for scanning</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                    Could Improve
-                  </h4>
-                  <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">1.</span>
-                      <span>No "Best Price" verification - just aggregation</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">2.</span>
-                      <span>Missing distance to city center/attractions</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">3.</span>
-                      <span>No scarcity or urgency indicators</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">4.</span>
-                      <span>Lack of amenity icons for quick scanning</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">5.</span>
-                      <span>No rating context (percentile ranking)</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- VacationRenter.com -->
-          <div class="border-b border-gray-200 pb-8">
-            <h3 class="text-xl font-bold text-gray-900 mb-4">VacationRenter.com</h3>
-            <div class="grid lg:grid-cols-2 gap-8">
-              <div class="space-y-4">
-                <div>
-                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
-                  <img src="./RP Vacationrenter.com.png" alt="VacationRenter desktop" class="w-full rounded-lg shadow border border-gray-200"/>
-                </div>
-                <div>
-                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
-                  <img src="./RP vacationrenter.com mobile iphone 14.png" alt="VacationRenter mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
-                </div>
-              </div>
-
-              <div class="space-y-6">
-                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
-                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
-                    Good UX
-                  </h4>
-                  <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">1.</span>
-                      <span>Icon-based amenity tags for quick scanning</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">2.</span>
-                      <span>Price per night prominently displayed</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">3.</span>
-                      <span>Badge indicators (Special offer, Reduced price)</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">4.</span>
-                      <span>Free cancellation highlighted</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-emerald-600 mt-1">5.</span>
-                      <span>Clean vertical card design with image carousel</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
-                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
-                    Could Improve
-                  </h4>
-                  <ul class="space-y-2 text-sm text-gray-700">
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">1.</span>
-                      <span>No "Best Price" verification</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">2.</span>
-                      <span>Generic "Special offer" lacks specific scarcity</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">3.</span>
-                      <span>Missing percentile rating context</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">4.</span>
-                      <span>No distance to key attractions shown</span>
-                    </li>
-                    <li class="flex items-start gap-2">
-                      <span class="text-amber-600 mt-1">5.</span>
-                      <span>Limited competitive differentiation</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- RentByOwner (Ours) -->
-          <div>
             <h3 class="text-xl font-bold text-gray-900 mb-4">RentByOwner (TravelAI)</h3>
             <div class="grid lg:grid-cols-2 gap-8">
               <div class="space-y-4">
@@ -1894,6 +1742,831 @@
                     <li class="flex items-start gap-2">
                       <span class="text-amber-600 mt-1">5.</span>
                       <span>No scarcity/urgency signals or rating context (Exceed gap)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- HomeToGo - SECOND -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">HomeToGo</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP hometogo.png" alt="HomeToGo desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Global meta-search across multiple platforms</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Strong price comparison functionality</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear property features and amenities</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Good use of imagery</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Filter and sort options accessible</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" guarantee/verification</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Missing "Top X%" rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Limited scarcity indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Visual design less modern than competitors</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Card layout could be more scannable</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- TripAdvisor - THIRD -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">TripAdvisor</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP tripadvisor.png" alt="TripAdvisor desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <div class="space-y-4">
+                    <img src="./RP tripadvisor mobile iphone 14.png" alt="TripAdvisor mobile 1" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                    <img src="./RP tripadvisor 2 mobile iphone 14.png" alt="TripAdvisor mobile 2" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Extensive review database with detailed ratings</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Multi-partner booking options displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Traveler photos build trust</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Amenities and features comprehensively shown</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Strong brand recognition and trust</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Price aggregation without "Best Price" guarantee</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>No percentile ranking for quality context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Can feel cluttered with too much information</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Ad-heavy experience in some sections</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Limited scarcity indicators</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VRBO - FOURTH -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">VRBO</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP vrbo.png" alt="VRBO desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Family-friendly messaging and positioning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Clear property specifications and amenities</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Nightly pricing prominently displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Cancellation policy visibility</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Whole-home focus differentiates from competitors</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Single platform (no multi-partner comparison)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>No "Best Price" verification badge</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Missing "Top X%" percentile ratings</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Limited scarcity/urgency indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Visual design less modern than Airbnb</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airbnb - FIFTH -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Airbnb</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP airbnb.png" alt="Airbnb desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <div class="space-y-4">
+                    <img src="./RP airbnb mobile iphone 14.png" alt="Airbnb mobile 1" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                    <img src="./RP airbnb 2 mobile iphone 14.png" alt="Airbnb mobile 2" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Minimalist, image-first design philosophy</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Excellent use of whitespace and typography</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear star ratings with review counts</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Nightly pricing prominently displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Superhost badges create trust</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Single-source pricing (no aggregation)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>No price verification or comparison</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Limited amenity visibility at card level</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No quality percentile context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Minimal urgency or scarcity signals</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Agoda - SIXTH (alphabetical starts) -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Agoda</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP agoda.png" alt="Agoda desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Clean visual hierarchy with prominent images</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Clear rating badges and review counts</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Price transparency with nightly rates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Property amenities clearly displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Strong use of promotional badges</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification across partners</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Limited distance/location context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>No percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Limited scarcity indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Dense layout can feel overwhelming</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Airbnb -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Airbnb</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP airbnb.png" alt="Airbnb desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <div class="space-y-4">
+                    <img src="./RP airbnb mobile iphone 14.png" alt="Airbnb mobile 1" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                    <img src="./RP airbnb 2 mobile iphone 14.png" alt="Airbnb mobile 2" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                  </div>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Minimalist, image-first design philosophy</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Excellent use of whitespace and typography</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear star ratings with review counts</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Nightly pricing prominently displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Superhost badges create trust</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Single-source pricing (no aggregation)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>No price verification or comparison</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Limited amenity visibility at card level</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No quality percentile context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Minimal urgency or scarcity signals</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Booking.com - SEVENTH -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Booking.com</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP booking.com.png" alt="Booking.com desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Comprehensive information density</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Strong urgency messaging and scarcity indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Distance to city center displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Icon-based amenities for quick scanning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Free cancellation prominently shown</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Can feel cluttered with too much information</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Single-source pricing (no cross-platform comparison)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>No percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Urgency can feel aggressive at times</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>No "Best Price" verification badge</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- CozyCozy -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">CozyCozy</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP cozycozy.png" alt="CozyCozy desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Multi-platform aggregation similar to TravelAI</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Clear pricing with nightly rates</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Property specifications well-organized</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Partner sources clearly identified</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Clean, uncluttered card design</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification badge</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Missing percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Limited scarcity/urgency indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Fewer amenity details at card level</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Less visual hierarchy than competitors</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Kayak.com - NINTH -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Kayak.com</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP Kayak.com.png" alt="Kayak desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP kayak.com mobile iphone 14.png" alt="Kayak mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Multi-partner price comparison in single view</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Large, prominent property images (~40% card width)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear rating badges with review counts</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Transparent partner attribution with logos</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Horizontal card layout optimized for scanning</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification - just aggregation</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Missing distance to city center/attractions</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>No scarcity or urgency indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Lack of amenity icons for quick scanning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>No rating context (percentile ranking)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Onefinestay - TENTH -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Onefinestay</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP onefinestay.com.png" alt="Onefinestay desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP onefinestay.com mobile iphone 14.png" alt="Onefinestay mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Premium, luxury-focused design aesthetic</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>High-quality imagery and sophisticated typography</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear property specifications</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Curated, vetted property selection</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Nightly pricing transparency</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Direct booking only (no price comparison)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>No "Best Price" verification</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Limited urgency/scarcity indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Premium positioning limits market reach</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VacationRenter.com - ELEVENTH -->
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">VacationRenter.com</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP Vacationrenter.com.png" alt="VacationRenter desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP vacationrenter.com mobile iphone 14.png" alt="VacationRenter mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Icon-based amenity tags for quick scanning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Price per night prominently displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Badge indicators (Special offer, Reduced price)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Free cancellation highlighted</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Clean vertical card design with image carousel</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Generic "Special offer" lacks specific scarcity</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Missing percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No distance to key attractions shown</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Limited competitive differentiation</span>
                     </li>
                   </ul>
                 </div>
