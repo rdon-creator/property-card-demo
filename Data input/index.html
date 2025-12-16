@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Property Card Redesign - TravelAI</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    
+    * {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    .card-shadow {
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.12);
+    }
+  </style>
+</head>
+<body class="bg-gray-100 text-gray-800 min-h-screen">
+  
+  <!-- Header -->
+  <header class="bg-white border-b border-gray-200 py-6 px-8 sticky top-0 z-50 shadow-sm">
+    <div class="max-w-7xl mx-auto">
+      <h1 class="text-2xl font-bold text-gray-900">Property Card Redesign</h1>
+      <p class="text-gray-500 mt-1">TravelAI Solutions - Vertical & Horizontal Options</p>
+    </div>
+  </header>
+
+  <main class="max-w-7xl mx-auto px-8 py-12">
+    
+    <!-- ==================== SECTION 1: PARITY ==================== -->
+    <section class="mb-16">
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="bg-emerald-100 text-emerald-700 px-3 py-1 rounded-full text-sm font-semibold">GOAL 1</span>
+          <h2 class="text-2xl font-bold text-gray-900">Meet Peer Set (Parity)</h2>
+        </div>
+        <p class="text-gray-600 max-w-3xl">
+          Adds missing elements competitors already have: distance to center, icon-based amenities, 
+          nightly rate as primary price anchor, and prominent free cancellation. These are table-stakes 
+          features that users expect from vacation rental aggregators.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-10">
+        
+        <!-- VERTICAL CARD - Booking.com -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Vertical Layout - Booking.com</h3>
+          
+          <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[340px]">
+            <!-- Image -->
+            <div class="relative h-[220px]">
+              <img 
+                src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop"
+                alt="Kaamla Resort"
+                class="w-full h-full object-cover"
+              />
+              
+              <!-- Action buttons -->
+              <div class="absolute top-3 right-3 flex gap-2">
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              
+              <!-- Carousel dots -->
+              <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-4">
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mb-2">
+                <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                  9.84
+                </span>
+                <span class="text-gray-800 text-sm font-medium">Exceptional</span>
+                <span class="text-gray-500 text-sm">(256 Reviews)</span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="text-gray-900 font-semibold text-base leading-tight mb-1">Kaamla Resort & Spa Ubud by Ini Vie Hospitality</h3>
+              
+              <!-- Location with distance - NEW -->
+              <div class="flex items-center gap-1 text-sm mb-2">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                <span class="text-gray-600">Bali › Ubud</span>
+                <span class="text-gray-400 mx-1">•</span>
+                <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+              </div>
+              
+              <!-- Specs -->
+              <p class="text-gray-500 text-sm mb-3">6 Guests · 3 Bedrooms · 3 Beds · 2 Baths</p>
+              
+              <!-- Amenity Icons - NEW -->
+              <div class="flex flex-wrap gap-2 mb-3">
+                <span class="flex items-center gap-1.5 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="10" r="2"/><path d="M3 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/></svg>
+                  Family Friendly
+                </span>
+                <span class="flex items-center gap-1.5 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/><path d="M2 16c1.5 0 2.5-1 4-1s2.5 1 4 1 2.5-1 4-1 2.5 1 4 1 2.5-1 4-1"/></svg>
+                  Pool
+                </span>
+                <span class="flex items-center gap-1.5 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><circle cx="12" cy="20" r="1"/></svg>
+                  WiFi
+                </span>
+              </div>
+              
+              <!-- Free Cancellation - NEW -->
+              <div class="flex items-center gap-1.5 text-emerald-600 text-xs font-medium mb-3">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Free cancellation until Dec 10
+              </div>
+              
+              <!-- Price section -->
+              <div class="flex items-end justify-between border-t border-gray-200 pt-3">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1.5 py-0.5 rounded">-17%</span>
+                    <span class="text-rose-500 text-xs font-semibold uppercase tracking-wide">Limited-Time Deal</span>
+                  </div>
+                  <!-- Nightly rate primary - NEW -->
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-gray-900 text-2xl font-bold">$69</span>
+                    <span class="text-gray-500 text-sm">/night</span>
+                  </div>
+                  <p class="text-gray-400 text-xs">
+                    <span class="line-through">$548</span>
+                    <span class="text-gray-500 ml-1">$486 total</span>
+                    <span class="text-gray-400 ml-1">· 7 nights</span>
+                  </p>
+                </div>
+                <div class="text-right">
+                  <!-- Booking.com Logo -->
+                  <div class="mb-2">
+                    <span class="text-[#003580] font-bold text-sm">Booking.com</span>
+                  </div>
+                  <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-1 transition-colors">
+                    VIEW DEAL
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- HORIZONTAL CARD - Vrbo -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Horizontal Layout - Vrbo</h3>
+          
+          <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[580px]">
+            <!-- Image -->
+            <div class="relative w-[220px] shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop"
+                alt="Kaamla Resort"
+                class="w-full h-full object-cover"
+              />
+              
+              <!-- Action buttons -->
+              <div class="absolute top-3 right-3 flex gap-1.5">
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                </button>
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </button>
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              
+              <!-- Carousel dots -->
+              <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 p-4 flex flex-col">
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                  9.84
+                </span>
+                <span class="text-gray-800 text-sm font-medium">Exceptional</span>
+                <span class="text-gray-500 text-xs">(256 Reviews)</span>
+              </div>
+              
+              <!-- Title -->
+              <h3 class="text-gray-900 font-semibold text-base leading-tight mb-1">Kaamla Resort & Spa Ubud by Ini Vie Hospitality</h3>
+              
+              <!-- Location with distance -->
+              <div class="flex items-center gap-1 text-xs mb-2">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                <span class="text-gray-600">Bali › Ubud</span>
+                <span class="text-gray-400 mx-1">•</span>
+                <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+              </div>
+              
+              <!-- Specs -->
+              <p class="text-gray-500 text-xs mb-2">6 Guests · 3 Bedrooms · 3 Beds · 2 Baths</p>
+              
+              <!-- Amenities -->
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="10" r="2"/></svg>
+                  Family
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/></svg>
+                  Pool
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><circle cx="12" cy="20" r="1"/></svg>
+                  WiFi
+                </span>
+              </div>
+              
+              <!-- Free Cancellation -->
+              <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium mb-2">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Free cancellation until Dec 10
+              </div>
+              
+              <!-- Price section -->
+              <div class="mt-auto pt-2 border-t border-gray-200 flex items-end justify-between">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1.5 py-0.5 rounded">-17%</span>
+                    <span class="text-rose-500 text-xs font-semibold uppercase">Limited-Time Deal</span>
+                  </div>
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-gray-900 text-xl font-bold">$69</span>
+                    <span class="text-gray-500 text-sm">/night</span>
+                  </div>
+                  <p class="text-gray-400 text-xs">
+                    <span class="line-through">$548</span>
+                    <span class="text-gray-500 ml-1">$486 total</span>
+                  </p>
+                </div>
+                <div class="text-right">
+                  <!-- Vrbo Logo -->
+                  <div class="mb-2">
+                    <span class="text-[#3b5998] font-bold text-sm tracking-tight">vrbo</span>
+                  </div>
+                  <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-1 transition-colors">
+                    VIEW DEAL
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Divider -->
+    <div class="border-t border-gray-300 my-12"></div>
+    
+    <!-- ==================== SECTION 2: EXCEED ==================== -->
+    <section class="mb-16">
+      <div class="mb-6">
+        <div class="flex items-center gap-3 mb-2">
+          <span class="bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-sm font-semibold">GOAL 2</span>
+          <h2 class="text-2xl font-bold text-gray-900">Exceed Peer Set (Differentiation)</h2>
+        </div>
+        <p class="text-gray-600 max-w-3xl">
+          Adds competitive advantages competitors don't have: "Best Price" verification badge, 
+          "Top X%" rating context, and scarcity indicators. These drive urgency and trust, 
+          positioning TravelAI as the smarter choice for price-conscious travelers.
+        </p>
+      </div>
+      
+      <div class="grid lg:grid-cols-2 gap-10">
+        
+        <!-- VERTICAL CARD - Booking.com - EXCEED -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Vertical Layout - Booking.com</h3>
+          
+          <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[340px]">
+            <!-- Image -->
+            <div class="relative h-[220px]">
+              <img 
+                src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop"
+                alt="Kaamla Resort"
+                class="w-full h-full object-cover"
+              />
+              
+              <!-- Action buttons -->
+              <div class="absolute top-3 right-3 flex gap-2">
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </button>
+                <button class="w-8 h-8 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              
+              <!-- BEST PRICE Badge - NEW -->
+              <div class="absolute bottom-3 left-3 bg-emerald-500 text-white text-xs font-bold px-2.5 py-1 rounded flex items-center gap-1 shadow-lg">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                BEST PRICE
+              </div>
+              
+              <!-- Carousel dots -->
+              <div class="absolute bottom-3 right-3 flex gap-1.5">
+                <div class="w-2 h-2 rounded-full bg-white"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+                <div class="w-2 h-2 rounded-full bg-white/50"></div>
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="p-4">
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="white"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                  9.84
+                </span>
+                <span class="text-gray-800 text-sm font-medium">Exceptional</span>
+                <span class="text-gray-500 text-sm">(256 Reviews)</span>
+              </div>
+              
+              <!-- Rating Context - NEW -->
+              <div class="flex items-center gap-1.5 text-amber-600 text-xs font-medium mb-2">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15c-3.31 0-6-2.69-6-6V3h12v6c0 3.31-2.69 6-6 6z"/><path d="M6 3H2v3c0 2.21 1.79 4 4 4"/><path d="M18 3h4v3c0 2.21-1.79 4-4 4"/><path d="M12 15v3"/><path d="M8 21h8"/></svg>
+                Top 5% in Ubud
+              </div>
+              
+              <!-- Title -->
+              <h3 class="text-gray-900 font-semibold text-base leading-tight mb-1">Kaamla Resort & Spa Ubud by Ini Vie Hospitality</h3>
+              
+              <!-- Location with distance -->
+              <div class="flex items-center gap-1 text-sm mb-2">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                <span class="text-gray-600">Bali › Ubud</span>
+                <span class="text-gray-400 mx-1">•</span>
+                <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+              </div>
+              
+              <!-- Specs -->
+              <p class="text-gray-500 text-sm mb-2">6 Guests · 3 Bedrooms · 3 Beds · 2 Baths</p>
+              
+              <!-- Expanded Amenity Icons -->
+              <div class="flex flex-wrap gap-1.5 mb-2">
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/><circle cx="17" cy="10" r="2"/></svg>
+                  Family
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/></svg>
+                  Pool
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><circle cx="12" cy="20" r="1"/></svg>
+                  WiFi
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="8" rx="2"/></svg>
+                  A/C
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-2 py-1 rounded">
+                  <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 17V7h4a3 3 0 0 1 0 6H9"/></svg>
+                  Parking
+                </span>
+              </div>
+              
+              <!-- Free Cancellation -->
+              <div class="flex items-center gap-1.5 text-emerald-600 text-xs font-medium mb-2">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                Free cancellation until Dec 10
+              </div>
+              
+              <!-- Scarcity - NEW -->
+              <div class="text-orange-500 text-xs font-medium mb-3">
+                🔥 Only 2 left at this price
+              </div>
+              
+              <!-- Price section -->
+              <div class="flex items-end justify-between border-t border-gray-200 pt-3">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1.5 py-0.5 rounded">-17%</span>
+                    <span class="text-rose-500 text-xs font-semibold uppercase tracking-wide">Limited-Time Deal</span>
+                  </div>
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-gray-900 text-2xl font-bold">$69</span>
+                    <span class="text-gray-500 text-sm">/night</span>
+                  </div>
+                  <p class="text-gray-400 text-xs">
+                    <span class="line-through">$548</span>
+                    <span class="text-gray-500 ml-1">$486 total</span>
+                    <span class="text-gray-400 ml-1">· 7 nights</span>
+                  </p>
+                </div>
+                <div class="text-right">
+                  <!-- Booking.com Logo -->
+                  <div class="mb-2">
+                    <span class="text-[#003580] font-bold text-sm">Booking.com</span>
+                  </div>
+                  <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-1 transition-colors">
+                    VIEW DEAL
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- HORIZONTAL CARD - Vrbo - EXCEED -->
+        <div>
+          <h3 class="text-sm font-semibold text-gray-500 uppercase tracking-wide mb-4">Horizontal Layout - Vrbo</h3>
+          
+          <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[580px]">
+            <!-- Image -->
+            <div class="relative w-[220px] shrink-0">
+              <img 
+                src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop"
+                alt="Kaamla Resort"
+                class="w-full h-full object-cover"
+              />
+              
+              <!-- Action buttons -->
+              <div class="absolute top-3 right-3 flex gap-1.5">
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8M16 6l-4-4-4 4M12 2v13"/></svg>
+                </button>
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                </button>
+                <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                </button>
+              </div>
+              
+              <!-- BEST PRICE Badge - NEW -->
+              <div class="absolute bottom-3 left-3 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                BEST PRICE
+              </div>
+            </div>
+            
+            <!-- Content -->
+            <div class="flex-1 p-4 flex flex-col">
+              <!-- Rating -->
+              <div class="flex items-center gap-2 mb-1">
+                <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded flex items-center gap-1">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="white"><path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3zM7 22H4a2 2 0 0 1-2-2v-7a2 2 0 0 1 2-2h3"/></svg>
+                  9.84
+                </span>
+                <span class="text-gray-800 text-sm font-medium">Exceptional</span>
+                <span class="text-gray-500 text-xs">(256 Reviews)</span>
+              </div>
+              
+              <!-- Rating context - NEW -->
+              <div class="flex items-center gap-1.5 text-amber-600 text-xs font-medium mb-1">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15c-3.31 0-6-2.69-6-6V3h12v6c0 3.31-2.69 6-6 6z"/><path d="M6 3H2v3c0 2.21 1.79 4 4 4"/><path d="M18 3h4v3c0 2.21-1.79 4-4 4"/></svg>
+                Top 5% in Ubud
+              </div>
+              
+              <!-- Title -->
+              <h3 class="text-gray-900 font-semibold text-base leading-tight mb-1">Kaamla Resort & Spa Ubud by Ini Vie Hospitality</h3>
+              
+              <!-- Location with distance -->
+              <div class="flex items-center gap-1 text-xs mb-2">
+                <svg width="10" height="10" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                <span class="text-gray-600">Bali › Ubud</span>
+                <span class="text-gray-400 mx-1">•</span>
+                <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+              </div>
+              
+              <!-- Specs -->
+              <p class="text-gray-500 text-xs mb-2">6 Guests · 3 Bedrooms · 3 Beds · 2 Baths</p>
+              
+              <!-- Amenities -->
+              <div class="flex flex-wrap gap-1 mb-2">
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/></svg>
+                  Family
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/></svg>
+                  Pool
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><circle cx="12" cy="20" r="1"/></svg>
+                  WiFi
+                </span>
+                <span class="flex items-center gap-1 bg-gray-100 text-gray-600 text-xs px-1.5 py-0.5 rounded">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="8" rx="2"/></svg>
+                  A/C
+                </span>
+              </div>
+              
+              <!-- Free Cancellation + Scarcity -->
+              <div class="flex items-center gap-3 mb-2">
+                <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+                  <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                  Free cancellation
+                </div>
+                <div class="text-orange-500 text-xs font-medium">
+                  🔥 Only 2 left
+                </div>
+              </div>
+              
+              <!-- Price section -->
+              <div class="mt-auto pt-2 border-t border-gray-200 flex items-end justify-between">
+                <div>
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1.5 py-0.5 rounded">-17%</span>
+                    <span class="text-rose-500 text-xs font-semibold uppercase">Limited-Time Deal</span>
+                  </div>
+                  <div class="flex items-baseline gap-1">
+                    <span class="text-gray-900 text-xl font-bold">$69</span>
+                    <span class="text-gray-500 text-sm">/night</span>
+                  </div>
+                  <p class="text-gray-400 text-xs">
+                    <span class="line-through">$548</span>
+                    <span class="text-gray-500 ml-1">$486 total</span>
+                  </p>
+                </div>
+                <div class="text-right">
+                  <!-- Vrbo Logo -->
+                  <div class="mb-2">
+                    <span class="text-[#3b5998] font-bold text-sm tracking-tight">vrbo</span>
+                  </div>
+                  <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-4 py-2 rounded-lg text-sm flex items-center gap-1 transition-colors">
+                    VIEW DEAL
+                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Summary -->
+    <section class="bg-white rounded-xl p-8 card-shadow">
+      <h2 class="text-xl font-bold text-gray-900 mb-4">Quick Reference</h2>
+      
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="bg-emerald-50 rounded-lg p-4">
+          <h3 class="font-semibold text-emerald-700 mb-2">Parity Features</h3>
+          <p class="text-gray-600 text-sm">Distance to center, icon amenities, nightly rate, free cancellation</p>
+        </div>
+        <div class="bg-amber-50 rounded-lg p-4">
+          <h3 class="font-semibold text-amber-700 mb-2">Exceed Features</h3>
+          <p class="text-gray-600 text-sm">Best Price badge, Top X% rating, scarcity indicator, expanded amenities</p>
+        </div>
+      </div>
+    </section>
+    
+  </main>
+  
+  <footer class="text-center py-6 text-gray-400 text-sm">
+    Property Card Redesign - TravelAI Solutions - December 2025
+  </footer>
+  
+</body>
+</html>

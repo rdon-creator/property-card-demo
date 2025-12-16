@@ -42,26 +42,56 @@
   
   <!-- Header -->
   <header class="bg-white border-b border-gray-200 py-6 px-8 sticky top-0 z-50 shadow-sm">
-    <div class="max-w-[1400px] mx-auto">
+    <div class="max-w-[1600px] mx-auto">
       <h1 class="text-2xl font-bold text-gray-900">Property Card Redesign</h1>
       <p class="text-gray-500 mt-1">TravelAI Solutions - Current → Figma Proposal → Revised Proposal</p>
 
       <!-- Navigation Tabs -->
-      <nav class="flex gap-4 mt-4 border-b border-gray-200">
-        <button class="tab-btn active pb-2 px-4 font-medium border-b-2 border-[#0d6e6e] text-[#0d6e6e]" onclick="showTab('home')">
+      <nav class="flex gap-2 mt-4 border-b border-gray-200 overflow-x-auto">
+        <button class="tab-btn active pb-2 px-3 font-medium border-b-2 border-[#0d6e6e] text-[#0d6e6e] whitespace-nowrap text-sm" onclick="showTab('home')">
           Home
         </button>
-        <button class="tab-btn pb-2 px-4 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700" onclick="showTab('kayak')">
-          Kayak.com
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('overview')">
+          Overview
         </button>
-        <button class="tab-btn pb-2 px-4 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700" onclick="showTab('vacationrenter')">
-          VacationRenter.com
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('kayak')">
+          Kayak
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('vacationrenter')">
+          VacationRenter
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('agoda')">
+          Agoda
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('airbnb')">
+          Airbnb
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('booking')">
+          Booking.com
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('cozycozy')">
+          CozyCozy
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('hometogo')">
+          HomeToGo
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('onefinestay')">
+          Onefinestay
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('tripadvisor')">
+          TripAdvisor
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('vrbo')">
+          VRBO
+        </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('rentbyowner')">
+          RentByOwner
         </button>
       </nav>
     </div>
   </header>
 
-  <main class="max-w-[1400px] mx-auto px-8 py-12">
+  <main class="max-w-[1600px] mx-auto px-8 py-12">
 
     <!-- Tab Content: Home -->
     <div id="home-tab" class="tab-content">
@@ -190,23 +220,23 @@
           <h2 class="text-2xl font-bold text-gray-900">Meet Peer Set (Parity)</h2>
         </div>
         <p class="text-gray-600 max-w-3xl">
-          Adds the missing elements competitors already have: distance to center, icon-based amenities, 
+          Adds the missing elements competitors already have: distance to center, icon-based amenities,
           nightly rate as primary price, and free cancellation. These are table-stakes features users expect.
         </p>
       </div>
-      
-      <!-- VERTICAL COMPARISON: Booking.com - 3 WAY -->
-      <div class="mb-12">
+
+      <!-- VERTICAL LAYOUTS ROW -->
+      <div class="mb-10">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
           <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-sm">VERTICAL</span>
-          Booking.com Partner Card
+          Figma → Revised (Booking.com) | Figma → Revised (Vrbo)
         </h3>
 
         <div class="flex items-start gap-6 flex-wrap">
 
-          <!-- FIGMA PROPOSAL -->
+          <!-- BOOKING.COM - FIGMA PROPOSAL -->
           <div>
-            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Figma Proposal</p>
+            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Booking.com - Figma Proposal</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -337,22 +367,10 @@
               </div>
             </div>
           </div>
-          
-        </div>
-      </div>
-      
-      <!-- VERTICAL COMPARISON: Vrbo - 3 WAY -->
-      <div>
-        <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
-          <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-sm">VERTICAL</span>
-          Vrbo Partner Card
-        </h3>
 
-        <div class="flex items-start gap-6 flex-wrap">
-
-          <!-- FIGMA PROPOSAL -->
+          <!-- VRBO - FIGMA PROPOSAL -->
           <div>
-            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Figma Proposal</p>
+            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Vrbo - Figma Proposal</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -400,10 +418,10 @@
           
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
-          
-          <!-- REVISED PROPOSAL - PARITY -->
+
+          <!-- VRBO - REVISED PROPOSAL - PARITY -->
           <div>
-            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Revised Proposal (Parity)</p>
+            <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Vrbo - Revised Proposal (Parity)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -470,7 +488,278 @@
               </div>
             </div>
           </div>
-          
+
+        </div>
+      </div>
+
+      <!-- HORIZONTAL LAYOUTS ROW -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-sm">HORIZONTAL</span>
+          Figma → Revised (Booking.com) | Figma → Revised (Vrbo)
+        </h3>
+
+        <div class="flex flex-col gap-6">
+          <!-- First Horizontal Row: Booking.com -->
+          <div class="flex items-start gap-6 flex-wrap">
+            <!-- BOOKING.COM HORIZONTAL - FIGMA -->
+            <div>
+              <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Booking.com - Figma Proposal</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">9.84</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(12 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Kaamla Resort & Spa Ubud</h3>
+                  <p class="text-gray-500 text-xs mb-2">1200 ft2 · 6 Guests · 3 Bedrooms</p>
+                  <div class="flex gap-1 mb-2">
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Family Friendly</span>
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Villa</span>
+                  </div>
+                  <p class="text-[#0d6e6e] text-xs mb-auto">Bali › Ubud</p>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-center gap-1 mb-1">
+                        <span class="bg-green-600 text-white text-xs font-bold px-1 rounded">-17%</span>
+                        <span class="text-orange-500 text-xs font-semibold">LIMITED-TIME</span>
+                      </div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-400 line-through text-xs">$548</span>
+                        <span class="text-gray-900 text-base font-bold">$486</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">7 nights</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#003580] font-bold text-xs mb-1">Booking.com</p>
+                      <button class="bg-[#0d6e6e] text-white font-semibold px-2.5 py-1 rounded text-xs">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="comparison-arrow self-center mt-8">→</div>
+
+            <!-- BOOKING.COM HORIZONTAL - REVISED -->
+            <div>
+              <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Booking.com - Revised Proposal (Parity)</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">9.84</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(256 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Kaamla Resort & Spa Ubud</h3>
+                  <!-- NEW: Distance -->
+                  <div class="flex items-center gap-1 text-xs mb-1">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                    <span class="text-gray-500">Bali › Ubud</span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+                  </div>
+                  <p class="text-gray-500 text-xs mb-1">6 Guests · 3 Bedrooms · 3 Beds</p>
+                  <!-- NEW: Icon amenities -->
+                  <div class="flex flex-wrap gap-1 mb-1">
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="3"/></svg>
+                      Family
+                    </span>
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/></svg>
+                      Pool
+                    </span>
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12.55a11 11 0 0 1 14.08 0"/><circle cx="12" cy="20" r="1"/></svg>
+                      WiFi
+                    </span>
+                  </div>
+                  <!-- NEW: Free cancellation -->
+                  <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium mb-auto">
+                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Free cancellation until Dec 10
+                  </div>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-center gap-1 mb-1">
+                        <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1 rounded">-17%</span>
+                        <span class="text-rose-500 text-xs font-semibold">LIMITED-TIME</span>
+                      </div>
+                      <!-- NEW: Nightly rate -->
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$69</span>
+                        <span class="text-gray-500 text-xs">/night</span>
+                      </div>
+                      <p class="text-gray-400 text-xs"><span class="line-through">$548</span> $486 total</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#003580] font-bold text-xs mb-1">Booking.com</p>
+                      <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-2.5 py-1 rounded text-xs transition-colors">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Horizontal Row: Vrbo -->
+          <div class="flex items-start gap-6 flex-wrap">
+            <!-- VRBO HORIZONTAL - FIGMA -->
+            <div>
+              <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Vrbo - Figma Proposal</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">10.0</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(90 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Authentic Beachvilla with cook</h3>
+                  <p class="text-gray-500 text-xs mb-2">Air Conditioner · Balcony · Bedding</p>
+                  <div class="flex gap-1 mb-2">
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Villa</span>
+                  </div>
+                  <p class="text-[#0d6e6e] text-xs mb-auto">Bali › Gerokgak</p>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$231</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">per night</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#3b5998] font-bold text-xs mb-1">vrbo</p>
+                      <button class="bg-[#0d6e6e] text-white font-semibold px-2.5 py-1 rounded text-xs">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="comparison-arrow self-center mt-8">→</div>
+
+            <!-- VRBO HORIZONTAL - REVISED -->
+            <div>
+              <p class="text-xs font-semibold text-emerald-600 uppercase tracking-wide mb-3">Vrbo - Revised Proposal (Parity)</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">10.0</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(90 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Authentic Beachvilla with cook</h3>
+                  <!-- NEW: Distance -->
+                  <div class="flex items-center gap-1 text-xs mb-1">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                    <span class="text-gray-500">Bali › Gerokgak</span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-[#0d6e6e] font-medium">Beachfront</span>
+                  </div>
+                  <p class="text-gray-500 text-xs mb-1">6 Guests · 3 Bedrooms · Villa</p>
+                  <!-- NEW: Icon amenities -->
+                  <div class="flex flex-wrap gap-1 mb-1">
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="8" rx="2"/></svg>
+                      A/C
+                    </span>
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12h20"/></svg>
+                      Pool
+                    </span>
+                    <span class="flex items-center gap-0.5 bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Balcony</span>
+                  </div>
+                  <!-- NEW: Free cancellation -->
+                  <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium mb-auto">
+                    <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    Free cancellation until Dec 10
+                  </div>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <!-- NEW: Nightly rate prominent -->
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$231</span>
+                        <span class="text-gray-500 text-xs">/night</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">$1,617 total · 7 nights</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#3b5998] font-bold text-xs mb-1">vrbo</p>
+                      <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-2.5 py-1 rounded text-xs transition-colors">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -491,18 +780,18 @@
         </p>
       </div>
       
-      <!-- VERTICAL COMPARISON: Booking.com - 3 WAY EXCEED -->
-      <div class="mb-12">
+      <!-- VERTICAL LAYOUTS ROW - EXCEED -->
+      <div class="mb-10">
         <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
           <span class="bg-blue-100 text-blue-700 px-2 py-0.5 rounded text-sm">VERTICAL</span>
-          Booking.com Partner Card
+          Figma → Revised (Booking.com) | Figma → Revised (Vrbo)
         </h3>
 
         <div class="flex items-start gap-6 flex-wrap">
 
-          <!-- FIGMA PROPOSAL -->
+          <!-- BOOKING.COM - FIGMA PROPOSAL -->
           <div>
-            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Figma Proposal</p>
+            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Booking.com - Figma Proposal</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -633,21 +922,9 @@
             </div>
           </div>
           
-        </div>
-      </div>
-      
-      <!-- VERTICAL COMPARISON: Vrbo - 3 WAY EXCEED -->
-      <div>
-        <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
-          <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-sm">VERTICAL</span>
-          Vrbo Partner Card
-        </h3>
-
-        <div class="flex items-start gap-6 flex-wrap">
-
-          <!-- FIGMA PROPOSAL -->
+          <!-- VRBO - FIGMA PROPOSAL -->
           <div>
-            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Figma Proposal</p>
+            <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Vrbo - Figma Proposal</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -695,10 +972,10 @@
           
           <!-- Arrow -->
           <div class="comparison-arrow self-center mt-8">→</div>
-          
-          <!-- REVISED PROPOSAL - EXCEED -->
+
+          <!-- VRBO - REVISED PROPOSAL - EXCEED -->
           <div>
-            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Revised Proposal (Exceed)</p>
+            <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Vrbo - Revised Proposal (Exceed)</p>
             <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 w-[280px]">
               <div class="relative h-[160px]">
                 <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
@@ -768,7 +1045,279 @@
               </div>
             </div>
           </div>
-          
+
+        </div>
+      </div>
+
+      <!-- HORIZONTAL LAYOUTS ROW - EXCEED -->
+      <div class="mb-10">
+        <h3 class="text-lg font-semibold text-gray-700 mb-4 flex items-center gap-2">
+          <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-sm">HORIZONTAL</span>
+          Figma → Revised (Booking.com) | Figma → Revised (Vrbo)
+        </h3>
+
+        <div class="flex flex-col gap-6">
+          <!-- First Horizontal Row: Booking.com - EXCEED -->
+          <div class="flex items-start gap-6 flex-wrap">
+            <!-- BOOKING.COM HORIZONTAL - FIGMA -->
+            <div>
+              <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Booking.com - Figma Proposal</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">9.84</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(12 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Kaamla Resort & Spa Ubud</h3>
+                  <p class="text-gray-500 text-xs mb-2">1200 ft2 · 6 Guests · 3 Bedrooms</p>
+                  <div class="flex gap-1 mb-2">
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Family Friendly</span>
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Villa</span>
+                  </div>
+                  <p class="text-[#0d6e6e] text-xs mb-auto">Bali › Ubud</p>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-center gap-1 mb-1">
+                        <span class="bg-green-600 text-white text-xs font-bold px-1 rounded">-17%</span>
+                        <span class="text-orange-500 text-xs font-semibold">LIMITED-TIME</span>
+                      </div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-400 line-through text-xs">$548</span>
+                        <span class="text-gray-900 text-base font-bold">$486</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">7 nights</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#003580] font-bold text-xs mb-1">Booking.com</p>
+                      <button class="bg-[#0d6e6e] text-white font-semibold px-2.5 py-1 rounded text-xs">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="comparison-arrow self-center mt-8">→</div>
+
+            <!-- BOOKING.COM HORIZONTAL - REVISED EXCEED -->
+            <div>
+              <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Booking.com - Revised Proposal (Exceed)</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <!-- BEST PRICE Badge -->
+                  <div class="absolute bottom-3 left-3 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    BEST PRICE
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">9.84</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(256 Reviews)</span>
+                  </div>
+                  <!-- NEW: Rating context -->
+                  <div class="flex items-center gap-1 text-amber-600 text-xs font-medium mb-1">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15c-3.31 0-6-2.69-6-6V3h12v6c0 3.31-2.69 6-6 6z"/></svg>
+                    Top 5% in Ubud
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Kaamla Resort & Spa Ubud</h3>
+                  <!-- Distance -->
+                  <div class="flex items-center gap-1 text-xs mb-1">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                    <span class="text-gray-500">Bali › Ubud</span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-[#0d6e6e] font-medium">0.8 mi to center</span>
+                  </div>
+                  <p class="text-gray-500 text-xs mb-1">6 Guests · 3 Bedrooms · 3 Beds</p>
+                  <!-- Amenities -->
+                  <div class="flex flex-wrap gap-1 mb-1">
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Family</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Pool</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">WiFi</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">A/C</span>
+                  </div>
+                  <!-- Free cancellation + Scarcity -->
+                  <div class="flex items-center gap-2 mb-auto">
+                    <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      Free cancellation
+                    </div>
+                    <div class="text-orange-500 text-xs font-medium">🔥 Only 2 left</div>
+                  </div>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-center gap-1 mb-1">
+                        <span class="bg-emerald-100 text-emerald-700 text-xs font-bold px-1 rounded">-17%</span>
+                        <span class="text-rose-500 text-xs font-semibold">LIMITED-TIME</span>
+                      </div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$69</span>
+                        <span class="text-gray-500 text-xs">/night</span>
+                      </div>
+                      <p class="text-gray-400 text-xs"><span class="line-through">$548</span> $486 total</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#003580] font-bold text-xs mb-1">Booking.com</p>
+                      <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-2.5 py-1 rounded text-xs transition-colors">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Horizontal Row: Vrbo - EXCEED -->
+          <div class="flex items-start gap-6 flex-wrap">
+            <!-- VRBO HORIZONTAL - FIGMA -->
+            <div>
+              <p class="text-xs font-semibold text-orange-500 uppercase tracking-wide mb-3">Vrbo - Figma Proposal</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <div class="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1">
+                    <div class="w-1.5 h-1.5 rounded-full bg-white"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                    <div class="w-1.5 h-1.5 rounded-full bg-white/50"></div>
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">10.0</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(90 Reviews)</span>
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Authentic Beachvilla with cook</h3>
+                  <p class="text-gray-500 text-xs mb-2">Air Conditioner · Balcony · Bedding</p>
+                  <div class="flex gap-1 mb-2">
+                    <span class="bg-gray-200 text-gray-600 text-xs px-1.5 py-0.5 rounded">Villa</span>
+                  </div>
+                  <p class="text-[#0d6e6e] text-xs mb-auto">Bali › Gerokgak</p>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$231</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">per night</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#3b5998] font-bold text-xs mb-1">vrbo</p>
+                      <button class="bg-[#0d6e6e] text-white font-semibold px-2.5 py-1 rounded text-xs">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Arrow -->
+            <div class="comparison-arrow self-center mt-8">→</div>
+
+            <!-- VRBO HORIZONTAL - REVISED EXCEED -->
+            <div>
+              <p class="text-xs font-semibold text-amber-600 uppercase tracking-wide mb-3">Vrbo - Revised Proposal (Exceed)</p>
+              <div class="bg-white rounded-xl overflow-hidden card-shadow card-hover transition-all duration-300 flex w-[520px]">
+                <div class="relative w-[200px] shrink-0">
+                  <img src="https://images.unsplash.com/photo-1602002418082-a4443e081dd1?w=600&h=400&fit=crop" alt="Resort" class="w-full h-full object-cover"/>
+                  <div class="absolute top-3 right-3 flex gap-1.5">
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </button>
+                    <button class="w-7 h-7 rounded-full bg-[#0d6e6e] flex items-center justify-center shadow-md">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+                    </button>
+                  </div>
+                  <!-- BEST PRICE Badge -->
+                  <div class="absolute bottom-3 left-3 bg-emerald-500 text-white text-xs font-bold px-2 py-1 rounded flex items-center gap-1 shadow-lg">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                    BEST PRICE
+                  </div>
+                </div>
+                <div class="flex-1 p-3 flex flex-col">
+                  <div class="flex items-center gap-2 mb-1">
+                    <span class="bg-[#0d6e6e] text-white text-xs font-bold px-2 py-0.5 rounded">10.0</span>
+                    <span class="text-gray-800 text-xs font-medium">Exceptional</span>
+                    <span class="text-gray-400 text-xs">(90 Reviews)</span>
+                  </div>
+                  <!-- Rating context -->
+                  <div class="flex items-center gap-1 text-amber-600 text-xs font-medium mb-1">
+                    <svg width="10" height="10" viewBox="0 0 24 24" fill="currentColor"><path d="M12 15c-3.31 0-6-2.69-6-6V3h12v6c0 3.31-2.69 6-6 6z"/></svg>
+                    Top 10% in Gerokgak
+                  </div>
+                  <h3 class="text-gray-900 font-semibold text-sm leading-tight mb-1">Authentic Beachvilla with cook</h3>
+                  <!-- Distance -->
+                  <div class="flex items-center gap-1 text-xs mb-1">
+                    <svg width="9" height="9" viewBox="0 0 24 24" fill="#6b7280"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/></svg>
+                    <span class="text-gray-500">Bali › Gerokgak</span>
+                    <span class="text-gray-400">•</span>
+                    <span class="text-[#0d6e6e] font-medium">Beachfront</span>
+                  </div>
+                  <p class="text-gray-500 text-xs mb-1">6 Guests · 3 Bedrooms · Villa</p>
+                  <!-- Amenities -->
+                  <div class="flex flex-wrap gap-1 mb-1">
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">A/C</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Pool</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Balcony</span>
+                    <span class="bg-gray-100 text-gray-600 text-xs px-1 py-0.5 rounded">Cook</span>
+                  </div>
+                  <!-- Free cancellation + Scarcity -->
+                  <div class="flex items-center gap-2 mb-auto">
+                    <div class="flex items-center gap-1 text-emerald-600 text-xs font-medium">
+                      <svg width="8" height="8" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+                      Free cancellation
+                    </div>
+                    <div class="text-orange-500 text-xs font-medium">🔥 Only 3 left</div>
+                  </div>
+                  <div class="flex items-end justify-between border-t border-gray-200 pt-2 mt-2">
+                    <div>
+                      <div class="flex items-baseline gap-1">
+                        <span class="text-gray-900 text-base font-bold">$231</span>
+                        <span class="text-gray-500 text-xs">/night</span>
+                      </div>
+                      <p class="text-gray-400 text-xs">$1,617 total · 7 nights</p>
+                    </div>
+                    <div class="text-right">
+                      <p class="text-[#3b5998] font-bold text-xs mb-1">vrbo</p>
+                      <button class="bg-[#0d6e6e] hover:bg-[#0a5858] text-white font-semibold px-2.5 py-1 rounded text-xs transition-colors">VIEW DEAL ›</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -1100,6 +1649,925 @@
               <li class="flex items-start gap-2">
                 <span class="text-blue-500">★</span>
                 <span><strong>TravelAI Advantage:</strong> Specific scarcity count creates stronger urgency than generic "Special offer" badge</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Overview -->
+    <div id="overview-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">OVERVIEW</span>
+          <h2 class="text-2xl font-bold text-gray-900">Competitor Property Card Analysis</h2>
+        </div>
+
+        <p class="text-gray-600 mb-8">
+          Comprehensive analysis of property card designs across major vacation rental platforms, highlighting UX strengths and opportunities for improvement.
+        </p>
+
+        <!-- Competitors Grid -->
+        <div class="space-y-12">
+
+          <!-- Kayak.com -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">Kayak.com</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <!-- Screenshots -->
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP Kayak.com.png" alt="Kayak desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP kayak.com mobile iphone 14.png" alt="Kayak mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <!-- UX Analysis -->
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Multi-partner price comparison in single view</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Large, prominent property images (~40% card width)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Clear rating badges with review counts</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Transparent partner attribution with logos</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Horizontal card layout optimized for scanning</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification - just aggregation</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Missing distance to city center/attractions</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>No scarcity or urgency indicators</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>Lack of amenity icons for quick scanning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>No rating context (percentile ranking)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- VacationRenter.com -->
+          <div class="border-b border-gray-200 pb-8">
+            <h3 class="text-xl font-bold text-gray-900 mb-4">VacationRenter.com</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP Vacationrenter.com.png" alt="VacationRenter desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP vacationrenter.com mobile iphone 14.png" alt="VacationRenter mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Icon-based amenity tags for quick scanning</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Price per night prominently displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Badge indicators (Special offer, Reduced price)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Free cancellation highlighted</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Clean vertical card design with image carousel</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>No "Best Price" verification</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Generic "Special offer" lacks specific scarcity</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Missing percentile rating context</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No distance to key attractions shown</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>Limited competitive differentiation</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RentByOwner (Ours) -->
+          <div>
+            <h3 class="text-xl font-bold text-gray-900 mb-4">RentByOwner (TravelAI)</h3>
+            <div class="grid lg:grid-cols-2 gap-8">
+              <div class="space-y-4">
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Desktop</h4>
+                  <img src="./RP RBO.png" alt="RentByOwner desktop" class="w-full rounded-lg shadow border border-gray-200"/>
+                </div>
+                <div>
+                  <h4 class="text-sm font-semibold text-gray-700 mb-2">Mobile (iPhone 14)</h4>
+                  <img src="./RP RBO mobile iphone 14.png" alt="RentByOwner mobile" class="w-full max-w-[375px] rounded-lg shadow border border-gray-200"/>
+                </div>
+              </div>
+
+              <div class="space-y-6">
+                <div class="bg-emerald-50 rounded-lg p-4 border border-emerald-200">
+                  <h4 class="font-semibold text-emerald-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg>
+                    Good UX
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">1.</span>
+                      <span>Clean, uncluttered card design</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">2.</span>
+                      <span>Good use of imagery and visual hierarchy</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">3.</span>
+                      <span>Partner branding clearly displayed</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">4.</span>
+                      <span>Responsive design works well on mobile</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-emerald-600 mt-1">5.</span>
+                      <span>Consistent design system</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="bg-amber-50 rounded-lg p-4 border border-amber-200">
+                  <h4 class="font-semibold text-amber-800 mb-3 flex items-center gap-2">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg>
+                    Could Improve
+                  </h4>
+                  <ul class="space-y-2 text-sm text-gray-700">
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">1.</span>
+                      <span>Missing distance to city center/attractions (Parity gap)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">2.</span>
+                      <span>Amenities shown as plain text, not icons (Parity gap)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">3.</span>
+                      <span>Total price only, no nightly rate breakdown (Parity gap)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">4.</span>
+                      <span>No "Best Price" verification or competitive advantage (Exceed gap)</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                      <span class="text-amber-600 mt-1">5.</span>
+                      <span>No scarcity/urgency signals or rating context (Exceed gap)</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Agoda -->
+    <div id="agoda-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">Agoda Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Agoda's property card design emphasizes visual appeal with large imagery and structured information hierarchy for quick decision-making.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="mb-8">
+          <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+          <img src="./RP agoda.png" alt="Agoda desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              Agoda vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Both display prominent ratings and review counts</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Property amenities and specifications clearly shown</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Pricing transparency with nightly rates</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              Agoda vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification badge provides trust signal Agoda lacks</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Top X%" rating context helps users understand quality at a glance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Specific scarcity indicators create stronger urgency</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Airbnb -->
+    <div id="airbnb-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">Airbnb Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Airbnb is known for its minimalist, image-first approach with clean typography and thoughtful spacing that prioritizes visual discovery.
+        </p>
+
+        <!-- Screenshots -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+            <img src="./RP airbnb.png" alt="Airbnb desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Mobile Experience (iPhone 14)</h4>
+            <div class="space-y-4">
+              <img src="./RP airbnb mobile iphone 14.png" alt="Airbnb mobile search results 1" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+              <img src="./RP airbnb 2 mobile iphone 14.png" alt="Airbnb mobile search results 2" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              Airbnb vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Both emphasize high-quality imagery and visual appeal</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Clear rating system with star ratings</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Nightly pricing prominently displayed</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              Airbnb vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Multi-partner price aggregation vs Airbnb's single-source pricing</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification builds confidence beyond Airbnb's guarantee</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Percentile rating context provides clearer quality signals</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Booking.com -->
+    <div id="booking-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">Booking.com Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Booking.com employs dense information architecture with urgency signals, comprehensive property details, and trust badges throughout their card design.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="mb-8">
+          <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+          <img src="./RP booking.com.png" alt="Booking.com desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              Booking.com vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Comprehensive amenity information with icons</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Distance to city center displayed</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Free cancellation prominently shown</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              Booking.com vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500">△</span>
+                <span><strong>Similar:</strong> Both use scarcity indicators and urgency messaging</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Price verification across multiple partners vs Booking's single source</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Percentile rating context adds competitive positioning</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: CozyCozy -->
+    <div id="cozycozy-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">CozyCozy Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          CozyCozy aggregates vacation rentals from multiple platforms with a focus on comparison shopping and transparent pricing.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="mb-8">
+          <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+          <img src="./RP cozycozy.png" alt="CozyCozy desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              CozyCozy vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Multi-platform aggregation similar to TravelAI's approach</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Clear pricing with nightly rates</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Property specifications well-organized</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              CozyCozy vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification badge missing from CozyCozy</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Rating percentile context for better comparisons</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Scarcity signals create urgency CozyCozy lacks</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: HomeToGo -->
+    <div id="hometogo-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">HomeToGo Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          HomeToGo is a global vacation rental search engine that aggregates listings from multiple platforms with emphasis on price comparison.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="mb-8">
+          <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+          <img src="./RP hometogo.png" alt="HomeToGo desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              HomeToGo vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Search aggregation across multiple platforms</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Price comparison functionality</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Property amenities and features displayed</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              HomeToGo vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification provides trust HomeToGo doesn't guarantee</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Top X%" rating context for quality assessment</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Specific scarcity indicators drive conversion</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Onefinestay -->
+    <div id="onefinestay-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">Onefinestay Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          Onefinestay focuses on luxury vacation home rentals with a premium, curated experience and sophisticated design aesthetic.
+        </p>
+
+        <!-- Screenshots -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+            <img src="./RP onefinestay.com.png" alt="Onefinestay desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Mobile Experience (iPhone 14)</h4>
+            <img src="./RP onefinestay.com mobile iphone 14.png" alt="Onefinestay mobile search results" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              Onefinestay vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Premium imagery and sophisticated visual design</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Clear property specifications</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Nightly pricing transparency</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              Onefinestay vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Multi-partner price comparison vs Onefinestay's direct booking</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" badge provides value assurance</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Percentile ratings help users assess relative quality</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: TripAdvisor -->
+    <div id="tripadvisor-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">TripAdvisor Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          TripAdvisor leverages their extensive review database with trust signals, traveler photos, and comprehensive comparison features.
+        </p>
+
+        <!-- Screenshots -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+            <img src="./RP tripadvisor.png" alt="TripAdvisor desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Mobile Experience (iPhone 14)</h4>
+            <div class="space-y-4">
+              <img src="./RP tripadvisor mobile iphone 14.png" alt="TripAdvisor mobile search results 1" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+              <img src="./RP tripadvisor 2 mobile iphone 14.png" alt="TripAdvisor mobile search results 2" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+            </div>
+          </div>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              TripAdvisor vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Extensive review system with ratings</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Multi-partner booking options displayed</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Amenities and property features shown</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              TripAdvisor vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-amber-500">△</span>
+                <span><strong>Similar:</strong> Both emphasize review quantity and quality</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification vs TripAdvisor's price aggregation</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Percentile ranking adds competitive context</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: VRBO -->
+    <div id="vrbo-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">COMPETITOR</span>
+          <h2 class="text-2xl font-bold text-gray-900">VRBO Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          VRBO (Vacation Rentals by Owner) emphasizes whole-home rentals with family-friendly messaging and straightforward property information.
+        </p>
+
+        <!-- Screenshot -->
+        <div class="mb-8">
+          <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+          <img src="./RP vrbo.png" alt="VRBO desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+        </div>
+
+        <!-- Competitive Comparison -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Competitive Comparison vs TravelAI</h3>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              VRBO vs TravelAI Parity Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Clear property specifications and amenities</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Nightly pricing prominently displayed</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span><strong>Match:</strong> Cancellation policy visibility</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              VRBO vs TravelAI Exceed Proposal
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> Multi-partner comparison vs VRBO's single platform</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Best Price" verification badge</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span><strong>TravelAI Advantage:</strong> "Top X%" percentile ratings provide quality context</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: RentByOwner -->
+    <div id="rentbyowner-tab" class="tab-content hidden">
+      <section class="mb-12 bg-white rounded-xl p-8 card-shadow">
+        <div class="flex items-start gap-3 mb-6">
+          <span class="bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-sm font-semibold shrink-0">TRAVELAI</span>
+          <h2 class="text-2xl font-bold text-gray-900">RentByOwner (TravelAI) Property Cards</h2>
+        </div>
+
+        <p class="text-gray-600 mb-6">
+          RentByOwner is TravelAI's vacation rental platform. This analysis shows our current state and opportunities for improvement through the Parity and Exceed proposals.
+        </p>
+
+        <!-- Screenshots -->
+        <div class="grid md:grid-cols-2 gap-8 mb-8">
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Desktop Experience</h4>
+            <img src="./RP RBO.png" alt="RentByOwner desktop search results" class="w-full rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+          <div>
+            <h4 class="text-sm font-semibold text-gray-700 mb-3">Mobile Experience (iPhone 14)</h4>
+            <img src="./RP RBO mobile iphone 14.png" alt="RentByOwner mobile search results" class="w-full max-w-[375px] rounded-xl shadow-lg border border-gray-200"/>
+          </div>
+        </div>
+
+        <!-- Current State Analysis -->
+        <div class="mt-8 space-y-6">
+          <h3 class="font-semibold text-gray-800 mb-4">Current State & Improvement Opportunities</h3>
+
+          <div class="bg-red-50 rounded-lg p-6 border border-red-200">
+            <h4 class="text-sm font-semibold text-red-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-red-600 text-white px-2 py-0.5 rounded text-xs">GAPS</span>
+              Missing Features (vs Competitors)
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-red-500 font-bold">⚠</span>
+                <span>No distance to city center/attractions shown</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500 font-bold">⚠</span>
+                <span>Amenities displayed as plain text instead of scannable icons</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500 font-bold">⚠</span>
+                <span>Total price only, no nightly rate breakdown</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500 font-bold">⚠</span>
+                <span>No free cancellation visibility</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-red-500 font-bold">⚠</span>
+                <span>No "Best Price" verification or scarcity signals</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-emerald-50 rounded-lg p-6 border border-emerald-200">
+            <h4 class="text-sm font-semibold text-emerald-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-emerald-600 text-white px-2 py-0.5 rounded text-xs">PARITY</span>
+              Proposed Improvements
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span>Add distance to city center (e.g., "0.8 mi to center")</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span>Implement icon-based amenities (Pool, WiFi, A/C, etc.)</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span>Display nightly rate as primary with total secondary</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-emerald-500">✓</span>
+                <span>Highlight free cancellation prominently</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-amber-50 rounded-lg p-6 border border-amber-200">
+            <h4 class="text-sm font-semibold text-amber-700 uppercase tracking-wide mb-3 flex items-center gap-2">
+              <span class="bg-amber-600 text-white px-2 py-0.5 rounded text-xs">EXCEED</span>
+              Competitive Advantages
+            </h4>
+            <ul class="space-y-2 text-sm text-gray-700">
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span>"Best Price" verification badge to build trust</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span>"Top X%" rating context for quality assessment</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span>Scarcity indicators ("Only 2 left at this price")</span>
+              </li>
+              <li class="flex items-start gap-2">
+                <span class="text-blue-500">★</span>
+                <span>Expanded amenity visibility for better UX</span>
               </li>
             </ul>
           </div>
