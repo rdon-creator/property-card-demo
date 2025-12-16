@@ -54,6 +54,9 @@
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('overview')">
           Overview
         </button>
+        <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('matrix')">
+          Matrix
+        </button>
         <button class="tab-btn pb-2 px-3 font-medium border-b-2 border-transparent text-gray-500 hover:text-gray-700 whitespace-nowrap text-sm" onclick="showTab('rentbyowner')">
           RentByOwner
         </button>
@@ -2574,6 +2577,653 @@
             </div>
           </div>
 
+        </div>
+      </section>
+    </div>
+
+    <!-- Tab Content: Matrix -->
+    <div id="matrix-tab" class="tab-content hidden">
+      <style>
+        .matrix-quadrant-container {
+            position: relative;
+            width: 100%;
+            max-width: 900px;
+            aspect-ratio: 1;
+            margin: 0 auto 40px;
+        }
+
+        .matrix-quadrant {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .matrix-quadrant-bg {
+            position: absolute;
+            width: 50%;
+            height: 50%;
+        }
+
+        .matrix-q1 { top: 0; right: 0; background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%); }
+        .matrix-q2 { top: 0; left: 0; background: linear-gradient(135deg, #fef9c3 0%, #fef08a 100%); }
+        .matrix-q3 { bottom: 0; left: 0; background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%); }
+        .matrix-q4 { bottom: 0; right: 0; background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%); }
+
+        .matrix-quadrant-label {
+            position: absolute;
+            font-size: 13px;
+            font-weight: 600;
+            color: #475569;
+            padding: 12px;
+            max-width: 180px;
+            line-height: 1.4;
+        }
+
+        .matrix-q1-label { top: 8px; right: 8px; text-align: right; color: #166534; }
+        .matrix-q2-label { top: 8px; left: 8px; color: #854d0e; }
+        .matrix-q3-label { bottom: 8px; left: 8px; color: #991b1b; }
+        .matrix-q4-label { bottom: 8px; right: 8px; text-align: right; color: #075985; }
+
+        .matrix-axis-x, .matrix-axis-y {
+            position: absolute;
+            background: #94a3b8;
+        }
+
+        .matrix-axis-x {
+            width: 100%;
+            height: 2px;
+            top: 50%;
+            left: 0;
+        }
+
+        .matrix-axis-y {
+            width: 2px;
+            height: 100%;
+            left: 50%;
+            top: 0;
+        }
+
+        .matrix-axis-label {
+            position: absolute;
+            font-size: 12px;
+            font-weight: 700;
+            color: #334155;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .matrix-axis-label-x-left { left: 12px; top: 50%; transform: translateY(-50%); }
+        .matrix-axis-label-x-right { right: 12px; top: 50%; transform: translateY(-50%); }
+        .matrix-axis-label-y-top { top: 12px; left: 50%; transform: translateX(-50%); }
+        .matrix-axis-label-y-bottom { bottom: 12px; left: 50%; transform: translateX(-50%); }
+
+        .matrix-axis-title {
+            position: absolute;
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+        }
+
+        .matrix-axis-title-x {
+            bottom: -32px;
+            left: 50%;
+            transform: translateX(-50%);
+            white-space: nowrap;
+        }
+
+        .matrix-axis-title-y {
+            left: -36px;
+            top: 50%;
+            transform: rotate(-90deg) translateX(-50%);
+            transform-origin: left center;
+            white-space: nowrap;
+        }
+
+        .matrix-dot {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 10px;
+            font-weight: 700;
+            color: white;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            z-index: 10;
+        }
+
+        .matrix-dot:hover {
+            transform: scale(1.15);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+            z-index: 20;
+        }
+
+        .matrix-dot-label {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 11px;
+            font-weight: 600;
+            color: #334155;
+            white-space: nowrap;
+            margin-top: 4px;
+            pointer-events: none;
+        }
+
+        .matrix-rbo-current {
+            background: linear-gradient(135deg, #ef4444, #dc2626);
+            width: 50px;
+            height: 50px;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(239, 68, 68, 0.4);
+        }
+
+        .matrix-rbo-parity {
+            background: linear-gradient(135deg, #f59e0b, #d97706);
+            width: 50px;
+            height: 50px;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(245, 158, 11, 0.4);
+        }
+
+        .matrix-rbo-exceed {
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            width: 50px;
+            height: 50px;
+            border: 3px solid white;
+            box-shadow: 0 4px 15px rgba(34, 197, 94, 0.4);
+        }
+
+        .matrix-journey-path {
+            position: absolute;
+            z-index: 5;
+            pointer-events: none;
+        }
+
+        .matrix-journey-arrow {
+            stroke: #6366f1;
+            stroke-width: 3;
+            stroke-dasharray: 8 4;
+            fill: none;
+            marker-end: url(#matrix-arrowhead);
+        }
+
+        .matrix-booking { background: linear-gradient(135deg, #003580, #00224f); }
+        .matrix-airbnb { background: linear-gradient(135deg, #ff5a5f, #e5484d); }
+        .matrix-vrbo { background: linear-gradient(135deg, #3662d8, #2851c7); }
+        .matrix-kayak { background: linear-gradient(135deg, #ff690f, #e55a00); }
+        .matrix-vacationrenter { background: linear-gradient(135deg, #00a699, #008c80); }
+        .matrix-tripadvisor { background: linear-gradient(135deg, #34e0a1, #00aa6c); }
+        .matrix-hometogo { background: linear-gradient(135deg, #ff6b35, #e55a2b); }
+        .matrix-cozycozy { background: linear-gradient(135deg, #6366f1, #4f46e5); }
+
+        .matrix-journey-explanation {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .matrix-journey-step {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            position: relative;
+        }
+
+        .matrix-journey-step::before {
+            content: '';
+            position: absolute;
+            top: 24px;
+            left: -24px;
+            width: 24px;
+            height: 2px;
+            background: #e2e8f0;
+        }
+
+        .matrix-journey-step:first-child::before {
+            display: none;
+        }
+
+        .matrix-step-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+
+        .matrix-step-number {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .matrix-step-current .matrix-step-number { background: #ef4444; }
+        .matrix-step-parity .matrix-step-number { background: #f59e0b; }
+        .matrix-step-exceed .matrix-step-number { background: #22c55e; }
+
+        .matrix-step-header h3 {
+            font-size: 18px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .matrix-step-coords {
+            font-size: 12px;
+            color: #94a3b8;
+            margin-bottom: 12px;
+            font-family: monospace;
+        }
+
+        .matrix-step-features {
+            list-style: none;
+        }
+
+        .matrix-step-features li {
+            font-size: 13px;
+            color: #475569;
+            padding: 6px 0;
+            border-bottom: 1px solid #f1f5f9;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .matrix-step-features li:last-child {
+            border-bottom: none;
+        }
+
+        .matrix-feature-icon {
+            font-size: 14px;
+        }
+
+        .matrix-step-current .matrix-feature-icon { color: #ef4444; }
+        .matrix-step-parity .matrix-feature-icon { color: #f59e0b; }
+        .matrix-step-exceed .matrix-feature-icon { color: #22c55e; }
+
+        .matrix-summary-table {
+            margin-top: 40px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .matrix-summary-table h3 {
+            padding: 20px 24px;
+            font-size: 16px;
+            font-weight: 700;
+            color: #1e293b;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .matrix-score-bar {
+            width: 100%;
+            height: 8px;
+            background: #e2e8f0;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .matrix-score-fill {
+            height: 100%;
+            border-radius: 4px;
+        }
+
+        .matrix-score-low { background: #ef4444; }
+        .matrix-score-mid { background: #f59e0b; }
+        .matrix-score-high { background: #22c55e; }
+
+        .matrix-legend {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin-top: 40px;
+        }
+
+        .matrix-legend-section {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .matrix-legend-section h3 {
+            font-size: 14px;
+            color: #64748b;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 16px;
+        }
+
+        .matrix-legend-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
+
+        .matrix-legend-dot {
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .matrix-legend-text h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-bottom: 2px;
+        }
+
+        .matrix-legend-text p {
+            font-size: 12px;
+            color: #64748b;
+            line-height: 1.4;
+        }
+      </style>
+
+      <section class="mb-12">
+        <div class="bg-white rounded-xl p-8 card-shadow">
+          <h1 class="text-3xl font-bold text-gray-900 mb-2">Property Card UX: Strategic Positioning</h1>
+          <p class="text-gray-600 mb-8">Mapping RBO's journey from current state to market leader against competitive landscape</p>
+
+          <div class="matrix-quadrant-container">
+            <svg class="matrix-journey-path" width="100%" height="100%" viewBox="0 0 900 900" preserveAspectRatio="xMidYMid meet">
+                <defs>
+                    <marker id="matrix-arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                        <polygon points="0 0, 10 3.5, 0 7" fill="#6366f1"/>
+                    </marker>
+                </defs>
+                <path class="matrix-journey-arrow" d="M 225 630 Q 350 550 495 450"/>
+                <path class="matrix-journey-arrow" d="M 540 405 Q 600 320 675 225"/>
+            </svg>
+
+            <div class="matrix-quadrant">
+                <div class="matrix-quadrant-bg matrix-q1"></div>
+                <div class="matrix-quadrant-bg matrix-q2"></div>
+                <div class="matrix-quadrant-bg matrix-q3"></div>
+                <div class="matrix-quadrant-bg matrix-q4"></div>
+
+                <div class="matrix-quadrant-label matrix-q1-label">
+                    <strong>MARKET LEADERS</strong><br>
+                    Rich info + Strong conversion
+                </div>
+                <div class="matrix-quadrant-label matrix-q2-label">
+                    <strong>CONVERSION-FOCUSED</strong><br>
+                    Urgency without substance
+                </div>
+                <div class="matrix-quadrant-label matrix-q3-label">
+                    <strong>BASIC / LAGGING</strong><br>
+                    Minimal info, no urgency
+                </div>
+                <div class="matrix-quadrant-label matrix-q4-label">
+                    <strong>INFO-RICH</strong><br>
+                    Details without conversion
+                </div>
+
+                <div class="matrix-axis-x"></div>
+                <div class="matrix-axis-y"></div>
+
+                <span class="matrix-axis-label matrix-axis-label-x-left">Low</span>
+                <span class="matrix-axis-label matrix-axis-label-x-right">High</span>
+                <span class="matrix-axis-label matrix-axis-label-y-top">High</span>
+                <span class="matrix-axis-label matrix-axis-label-y-bottom">Low</span>
+
+                <div class="matrix-dot matrix-booking" style="left: calc(82% - 20px); top: calc(18% - 20px);">
+                    B.com
+                    <span class="matrix-dot-label">Booking.com</span>
+                </div>
+
+                <div class="matrix-dot matrix-airbnb" style="left: calc(72% - 20px); top: calc(38% - 20px);">
+                    Airbnb
+                    <span class="matrix-dot-label">Airbnb</span>
+                </div>
+
+                <div class="matrix-dot matrix-vrbo" style="left: calc(68% - 20px); top: calc(32% - 20px);">
+                    VRBO
+                    <span class="matrix-dot-label">VRBO</span>
+                </div>
+
+                <div class="matrix-dot matrix-kayak" style="left: calc(70% - 20px); top: calc(55% - 20px);">
+                    Kayak
+                    <span class="matrix-dot-label">Kayak</span>
+                </div>
+
+                <div class="matrix-dot matrix-vacationrenter" style="left: calc(62% - 20px); top: calc(42% - 20px);">
+                    VR
+                    <span class="matrix-dot-label">VacationRenter</span>
+                </div>
+
+                <div class="matrix-dot matrix-tripadvisor" style="left: calc(75% - 20px); top: calc(28% - 20px);">
+                    TA
+                    <span class="matrix-dot-label">TripAdvisor</span>
+                </div>
+
+                <div class="matrix-dot matrix-hometogo" style="left: calc(58% - 20px); top: calc(58% - 20px);">
+                    HTG
+                    <span class="matrix-dot-label">HomeToGo</span>
+                </div>
+
+                <div class="matrix-dot matrix-cozycozy" style="left: calc(55% - 20px); top: calc(62% - 20px);">
+                    CC
+                    <span class="matrix-dot-label">CozyCozy</span>
+                </div>
+
+                <div class="matrix-dot matrix-rbo-current" style="left: calc(25% - 25px); top: calc(70% - 25px);">
+                    NOW
+                    <span class="matrix-dot-label" style="font-size: 12px; font-weight: 700;">RBO Current</span>
+                </div>
+
+                <div class="matrix-dot matrix-rbo-parity" style="left: calc(58% - 25px); top: calc(45% - 25px);">
+                    PAR
+                    <span class="matrix-dot-label" style="font-size: 12px; font-weight: 700;">RBO Parity</span>
+                </div>
+
+                <div class="matrix-dot matrix-rbo-exceed" style="left: calc(78% - 25px); top: calc(15% - 25px);">
+                    LEAD
+                    <span class="matrix-dot-label" style="font-size: 12px; font-weight: 700;">RBO Exceed</span>
+                </div>
+            </div>
+
+            <span class="matrix-axis-title matrix-axis-title-x">INFORMATION RICHNESS →</span>
+            <span class="matrix-axis-title matrix-axis-title-y">← CONVERSION OPTIMIZATION</span>
+          </div>
+
+          <div class="matrix-journey-explanation">
+            <div class="matrix-journey-step matrix-step-current">
+                <div class="matrix-step-header">
+                    <div class="matrix-step-number">1</div>
+                    <h3>Current State</h3>
+                </div>
+                <div class="matrix-step-coords">Position: (25%, 30%) — Bottom-left quadrant</div>
+                <ul class="matrix-step-features">
+                    <li><span class="matrix-feature-icon">✗</span> Plain text amenities</li>
+                    <li><span class="matrix-feature-icon">✗</span> Total price only</li>
+                    <li><span class="matrix-feature-icon">✗</span> No distance context</li>
+                    <li><span class="matrix-feature-icon">✗</span> No cancellation visibility</li>
+                    <li><span class="matrix-feature-icon">✗</span> No urgency signals</li>
+                    <li><span class="matrix-feature-icon">✗</span> No trust badges</li>
+                </ul>
+            </div>
+
+            <div class="matrix-journey-step matrix-step-parity">
+                <div class="matrix-step-header">
+                    <div class="matrix-step-number">2</div>
+                    <h3>Parity</h3>
+                </div>
+                <div class="matrix-step-coords">Position: (58%, 55%) — Center-right</div>
+                <ul class="matrix-step-features">
+                    <li><span class="matrix-feature-icon">✓</span> Icon-based amenities</li>
+                    <li><span class="matrix-feature-icon">✓</span> Nightly + total pricing</li>
+                    <li><span class="matrix-feature-icon">✓</span> Distance to center</li>
+                    <li><span class="matrix-feature-icon">✓</span> Free cancellation badge</li>
+                    <li><span class="matrix-feature-icon">○</span> Basic urgency (discounts)</li>
+                    <li><span class="matrix-feature-icon">○</span> Partner attribution</li>
+                </ul>
+            </div>
+
+            <div class="matrix-journey-step matrix-step-exceed">
+                <div class="matrix-step-header">
+                    <div class="matrix-step-number">3</div>
+                    <h3>Market Leader</h3>
+                </div>
+                <div class="matrix-step-coords">Position: (78%, 85%) — Top-right quadrant</div>
+                <ul class="matrix-step-features">
+                    <li><span class="matrix-feature-icon">★</span> "Best Price" verification</li>
+                    <li><span class="matrix-feature-icon">★</span> "Top X%" rating context</li>
+                    <li><span class="matrix-feature-icon">★</span> Scarcity indicators</li>
+                    <li><span class="matrix-feature-icon">★</span> Multi-partner comparison</li>
+                    <li><span class="matrix-feature-icon">★</span> All Parity features</li>
+                    <li><span class="matrix-feature-icon">★</span> Unique trust signals</li>
+                </ul>
+            </div>
+          </div>
+
+          <div class="matrix-summary-table">
+            <h3>Competitive Scoring Matrix</h3>
+            <table class="w-full border-collapse">
+                <thead>
+                    <tr>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b">Platform</th>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b">Info Richness</th>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b" style="width: 100px;">Score</th>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b">Conversion Opt.</th>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b" style="width: 100px;">Score</th>
+                        <th class="p-4 text-left text-xs font-semibold text-gray-600 uppercase bg-gray-50 border-b">Quadrant</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="border-b">
+                        <td class="p-4"><strong>RBO Current</strong></td>
+                        <td class="p-4 text-sm text-gray-700">Basic details, text amenities</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-low" style="width: 25%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">No urgency or trust signals</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-low" style="width: 30%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #991b1b;">Basic/Lagging</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4"><strong>RBO Parity</strong></td>
+                        <td class="p-4 text-sm text-gray-700">Icons, distance, pricing breakdown</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 58%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Cancellation, basic badges</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 55%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #854d0e;">Approaching Leaders</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4"><strong>RBO Exceed</strong></td>
+                        <td class="p-4 text-sm text-gray-700">Full details + unique context</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-high" style="width: 78%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Best Price, scarcity, percentile</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-high" style="width: 85%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #166534;">Market Leader</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="p-4">Booking.com</td>
+                        <td class="p-4 text-sm text-gray-700">Comprehensive, dense info</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-high" style="width: 82%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Strong urgency, scarcity</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-high" style="width: 82%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #166534;">Market Leader</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">VRBO</td>
+                        <td class="p-4 text-sm text-gray-700">Good specs, amenities</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 68%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Cancellation, some badges</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 68%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #166534;">Market Leader</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="p-4">Airbnb</td>
+                        <td class="p-4 text-sm text-gray-700">Clean visual hierarchy</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 72%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Minimal urgency signals</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 62%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #166534;">Market Leader</td>
+                    </tr>
+                    <tr class="border-b">
+                        <td class="p-4">Kayak</td>
+                        <td class="p-4 text-sm text-gray-700">Multi-partner pricing</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 70%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Aggregation, no verification</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 45%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #075985;">Info-Rich</td>
+                    </tr>
+                    <tr class="bg-gray-50 border-b">
+                        <td class="p-4">HomeToGo</td>
+                        <td class="p-4 text-sm text-gray-700">Aggregation, basic info</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 58%"></div></div></td>
+                        <td class="p-4 text-sm text-gray-700">Limited conversion drivers</td>
+                        <td class="p-4"><div class="matrix-score-bar"><div class="matrix-score-fill matrix-score-mid" style="width: 42%"></div></div></td>
+                        <td class="p-4 text-sm" style="color: #075985;">Info-Rich</td>
+                    </tr>
+                </tbody>
+            </table>
+          </div>
+
+          <div class="matrix-legend">
+            <div class="matrix-legend-section">
+                <h3>Why This Framework?</h3>
+                <p style="font-size: 13px; color: #475569; line-height: 1.6;">
+                    <strong>Information Richness</strong> (X-axis) measures how well users can evaluate a property: amenity icons, pricing breakdown, distance, cancellation policy. These are table-stakes for decision-making.
+                </p>
+                <p style="font-size: 13px; color: #475569; line-height: 1.6; margin-top: 12px;">
+                    <strong>Conversion Optimization</strong> (Y-axis) measures what drives users to click: urgency signals, trust badges, scarcity indicators, best-price verification. These create action.
+                </p>
+            </div>
+
+            <div class="matrix-legend-section">
+                <h3>RBO's Opportunity</h3>
+                <p style="font-size: 13px; color: #475569; line-height: 1.6;">
+                    Currently in the <span style="color: #991b1b; font-weight: 600;">bottom-left quadrant</span> with basic cards missing competitive features.
+                </p>
+                <p style="font-size: 13px; color: #475569; line-height: 1.6; margin-top: 12px;">
+                    <strong>Parity</strong> catches up to VacationRenter/HomeToGo level. <strong>Exceed</strong> positions RBO alongside or above Booking.com with unique differentiators competitors lack.
+                </p>
+            </div>
+
+            <div class="matrix-legend-section">
+                <h3>Unique Differentiators</h3>
+                <div class="matrix-legend-item">
+                    <div class="matrix-legend-dot" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></div>
+                    <div class="matrix-legend-text">
+                        <h4>"Best Price" Verification</h4>
+                        <p>Multi-partner comparison with trust badge</p>
+                    </div>
+                </div>
+                <div class="matrix-legend-item">
+                    <div class="matrix-legend-dot" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></div>
+                    <div class="matrix-legend-text">
+                        <h4>"Top X%" Context</h4>
+                        <p>Percentile ranking, not just raw score</p>
+                    </div>
+                </div>
+                <div class="matrix-legend-item">
+                    <div class="matrix-legend-dot" style="background: linear-gradient(135deg, #22c55e, #16a34a);"></div>
+                    <div class="matrix-legend-text">
+                        <h4>Specific Scarcity</h4>
+                        <p>"Only 2 left" vs generic "Special offer"</p>
+                    </div>
+                </div>
+            </div>
+          </div>
         </div>
       </section>
     </div>
